@@ -13,3 +13,7 @@ Router.map ->
       ]
     data: ->
       posts: Posts.find({},{sort: {createdAt: -1}}).fetch()
+
+  @route "daily",
+    path: "/daily"
+    layoutTemplate: "dailyWord"
