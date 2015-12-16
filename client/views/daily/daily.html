@@ -1,7 +1,12 @@
 <template name="dailyWord">
+  {{> navbar}}
   <div class="container">
-    <div class="row" id="daily-word">
-      <p>The place for daily word in French</p>
+    <p class="word-problem"><span class="label label-default">Parler</span></p>
+    <div class="form-group">
+      <label for="word-input" class="sr-only">Your answer:</label>
+      <input class="form-control" type="text" id="word-input">
+      <p class="word-expectation help-block">Plural, for we .....</p>
     </div>
+    <button type="submit" class="btn btn-primary btn-block">New word // Answer (if input is !empty)</button>
   </div>
 </template>
