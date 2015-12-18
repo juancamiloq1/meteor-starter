@@ -8,6 +8,6 @@ Feature: Navigation in mobile should be toggable
     Given I am logged in
     And I see my email "kalin.chernev@gmail.com"
     When I see the browser is in xs-12 mobile
-    And I $(".navbar-toggle").click()
+    And I click on the nav toggle button
     Then I should see "Edit Profile"
     But I should not see my email "kalin.chernev@gmail.com"

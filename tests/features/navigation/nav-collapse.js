@@ -1,8 +1,8 @@
-var myStepDefinitionsWrapper = function () {
+module.exports = function() {
 
   this.Given(/^I am logged in$/, function () {
-    // Write the automation code here
-    pending();
+    // log in with meteor user or fill in predefined data
+    browser.url('http://localhost:3000/dashboard');
   });
 
   this.Given(/^I see my email "([^"]*)"$/, function (arg1) {
@@ -15,8 +15,8 @@ var myStepDefinitionsWrapper = function () {
     pending();
   });
 
-  this.When(/^I \$\("([^"]*)"\)\.click\(\)$/, function (arg1) {
-    // Write the automation code here
+  this.When(/^I click on the nav toggle button$/, function () {
+    $(".navbar-toggle").click(); // basically
     pending();
   });
 
@@ -31,4 +31,3 @@ var myStepDefinitionsWrapper = function () {
   });
 
 };
-module.exports = myStepDefinitionsWrapper;
