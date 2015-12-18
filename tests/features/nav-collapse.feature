@@ -6,7 +6,8 @@ Feature: Navigation in mobile should be toggable
   @watch
   Scenario: Navigation menu items show on clicking top nav button on mobile resolution.
     Given I am logged in
-    And I see "nav button"
-    When I press "nav button"
-    Then I should see "Notifications"
-    But the ?div should not have ?class "collapse"
+    And I see my email "kalin.chernev@gmail.com"
+    When I see the browser is in xs-12 mobile
+    And I $(".navbar-toggle").click()
+    Then I should see "Edit Profile"
+    But I should not see my email "kalin.chernev@gmail.com"
